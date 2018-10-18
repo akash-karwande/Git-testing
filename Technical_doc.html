@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+        <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+        <title>Technical Documentation Page</title>
+        
+        
+        
+        
+            <style>
+            html,body{
+        min-width:290px;
+          color: #4d4e53;
+          background-color:wheat;
+          font-style: italic;
+          font-family: 'Open Sans',Arial,sans-serif;
+          line-height: 1.5;
+      }
+      #navbar{
+        position:fixed;
+        min-width:290px;
+        top:0px;
+        left:0px;
+        width:300px;
+        height:100%;
+        border-right:solid;
+        border-color:rgba(0,22,22,0.4)
+      }
+      header{
+        color:black;
+        font-size: 30px;
+        margin:10px;
+        text-align:center;
+        font-size:1.8em;
+        font-weight:thin;
+      }
+      #main-doc header{
+        text-align:left;
+        margin:0px;
+      }
+      #navbar ul{
+        height:88%;
+        overflow-y:auto;
+        overflow-x:hidden;
+      }
+      #navbar li{
+        color: #4d4e53;
+        border:1px solid;
+        border-bottom-width:0px;
+        padding:8px;
+        padding-left:45px;
+        list-style: none;
+        position:relative;
+        left:-50px;
+        width:100%;
+        
+      }
+      #navbar a{
+        color: #4d4e53;
+          text-decoration:none;
+          cursor:pointer;
+      } 
+      #main-doc{
+        position: absolute;
+        margin-left:310px;
+        padding:20px;
+        margin-bottom:110px;
+      }
+      section article{
+        color: #4d4e53;
+        margin:15px;
+        font-size:0.96em;
+      }
+      section li {
+        margin:15px 0px 0px 20px;
+      }
+      code{
+        display:block;
+          text-align: left;
+        white-space: pre;
+        position: relative;
+          word-break: normal;
+          word-wrap: normal;
+          line-height: 2;
+          background-color:burlywood;
+        padding:15px;
+        margin:10px;
+          border-radius:5px;
+      }
+      @media only screen and (max-width: 815px) {
+          /* For mobile phones: */
+        #navbar ul{
+        border:1px solid;
+          height:207px;
+        }
+          #navbar{
+            background-color:white;
+            position:absolute;
+            top:0;
+            padding:0;
+            margin: 0;
+            width:100%;
+            max-height:275px;
+            border:none;
+            z-index:1;
+            border-bottom:2px solid;
+          }
+        #main-doc{
+          position: relative;
+          margin-left:0px;
+          margin-top:270px;
+        }
+        #main-doc section {
+      /*     padding-top: 240px; */
+        }
+      }
+      @media only screen and (max-width: 400px) {
+        #main-doc{
+          margin-left:-10px;
+        }
+        code{
+          margin-left:-20px;
+          width:100%;
+          padding:15px;
+          padding-left:10px;
+          padding-right:45px;
+          min-width:233px;
+        }
+      }
+          </style>
+      
+        <script>
+        window.console = window.console || function(t) {};
+      </script>
+      
+        
+        
+        <script>
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+      </script>
+      
+      
+      </head>
+      
+      <body translate="no">
+      
+        
+      <nav id="navbar">
+        <header>Python Documentation</header>
+        <ul> 
+          <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+          <a class="nav-link" href="#What_you_should_already_know" rel="internal"><li>What you should already know?</li></a>
+          <a class="nav-link" href="#JavaScript_and_Java" rel="internal"><li>Python Basic concept</li></a>
+          <a class="nav-link" href="#Hello_world" rel="internal"><li>Hello world</li></a>
+          <a class="nav-link" href="#Variables" rel="internal"><li>Variables</li></a>
+          <a class="nav-link" href="#Declaring_variables" rel="internal"><li>Declaring variables</li></a>
+          <a class="nav-link" href="#Variable_scope" rel="internal"><li>Scope of variable</li></a>
+          <a class="nav-link" href="#Global_variables" rel="internal"><li>Declaring Global variables</li></a>
+          <a class="nav-link" href="#Constants" rel="internal"><li>Function declarations in python</li></a>
+          <a class="nav-link" href="#Data_types" rel="internal"><li>Data types</li></a>
+          <a class="nav-link" href="#if...else_statement" rel="internal"><li>Looping statement in python</li></a>
+          <a class="nav-link" href="#while_statement" rel="internal"><li>For loop declaration</li></a>
+          <a class="nav-link" href="#Function_declarations" rel="internal"><li>Class declarations</li></a>
+          <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
+        </ul>
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header>Introduction</header>
+          <article>  
+            <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.</p>
+            <p>The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python Web site, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.</p>
+            
+            
+          </article></section>
+        <section class="main-section" id="What_you_should_already_know">
+          <header>What you should already know?</header>
+          <article>
+            <p>The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.</p>
+      
+           
+          </article></section>
+        <section class="main-section" id="JavaScript_and_Java">
+          <header>Python Basic concept</header>
+          <article>
+         <p>This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library.</p>
+    </article>
+          </section>
+        <section class="main-section" id="Hello_world">
+          <header>Hello world</header>
+          <article> 
+      To get started with writing python, open the python notebook and write your first "Hello world" python code:
+      <code>
+        print("hello world")
+      </code>
+      
+        Look is very easy to print hello world
+          </article>
+          </section>
+        <section class="main-section" id="Variables">
+          <header>Variables</header>
+         <p>This tutorial does not attempt to be comprehensive and cover every single feature, or even every commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will give you a good idea of the language’s flavor and style. After reading it, you will be able to read and write Python modules and programs, and you will be ready to learn more about the various Python library modules described in The Python Standard Library.</p>
+         
+          </section>
+        <section class="main-section" id="Declaring_variables">
+          <header>Declaring variables</header>
+          <article>
+      You can declare a variable in three ways:
+            <p>
+            With the keyword var. For example, <code>x = 42.</code> This syntax can be used to declare both local and global variables.
+            </p>
+            <p>
+              By simply assigning it a value. For example, <code>x = 42.</code> This always declares a global variable.
+            </p>
+            
+          </article>
+          </section>
+        <section class="main-section" id="Variable_scope">
+          <header>Variable scope</header>
+          <article>
+             <p>Global variables are the one that are defined and declared outside a function and we need to use them inside a function.</p>
+             <code>
+                # This function uses global variable s 
+                def f():  
+                    print s  
+                  
+                # Global scope 
+                s = "I love Geeksforgeeks"
+                f() </code>
+          </article>
+          </section>
+        <section class="main-section" id="Global_variables">
+          <header>Global variables</header>
+          <article>
+            <p>The variable s is defined as the string “I love Geeksforgeeks”, before we call the function f(). The only statement in f() is the “print s” statement. As there is no local s, the value from the global s will be used.
+
+                The question is, what will happen, if we change the value of s inside of the function f()? Will it affect the global s as well? We test it in the following piece of code:</p>
+                <code>def f():  
+                    print s 
+                  
+                    # This program will NOT show error 
+                    # if we comment below line.  
+                    s = "Me too."
+                  
+                    print s 
+                  
+                # Global scope 
+                s = "I love Geeksforgeeks" 
+                f() 
+                print s </code>
+          </article>
+          </section>
+        <section class="main-section" id="Constants">
+          <header>Function declaration in python</header>
+          <article>
+
+            <p>A function is a block of code which only runs when it is called.
+
+                You can pass data, known as parameters, into a function.
+                
+                A function can return data as a result.</p>
+                <code>def my_function():
+                    print("Hello from a function")</code>
+
+                    <p>The following example shows how to use a default parameter value.
+
+                        If we call the function without parameter, it uses the default value:</p>
+      <code>def my_function(country = "Norway"):
+          print("I am from " + country)
+        
+        my_function("Sweden")
+        my_function("India")
+        my_function()
+        my_function("Brazil")</code>
+          </article>
+          </section>
+        <section class="main-section" id="Data_types">
+          <header>Data types in python</header>
+          <article>
+            <p>You’ll learn about several basic numeric, string, and Boolean types that are built into Python. By the end of this tutorial, you’ll be familiar with what objects of these types look like, and how to represent them.
+                You’ll also get an overview of Python’s built-in functions. These are pre-written chunks of code you can call to do useful things. You have already seen the built-in print() function, but there are many others.</p>
+
+              <code>d = {1:'value','key':2}
+                  print(type(d))
+                  
+                  print("d[1] = ", d[1]);
+                  
+                  print("d['key'] = ", d['key']);
+                  
+                  # Generates error
+                  print("d[2] = ", d[2]);</code>
+
+          </article>
+          </section>
+        <section class="main-section" id="if...else_statement">
+          <header>Looping statement in python</header>
+          <article>
+
+            <p>Perhaps the most well-known statement type is the if statement. For example:</p>
+            <code>>>> x = int(input("Please enter an integer: "))
+                Please enter an integer: 42
+                >>> if x < 0:
+                ...     x = 0
+                ...     print('Negative changed to zero')
+                ... elif x == 0:
+                ...     print('Zero')
+                ... elif x == 1:
+                ...     print('Single')
+                ... else:
+                ...     print('More')
+                ...
+                More</code>
+
+                <p>There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.</p>
+              <p>If you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. It generates arithmetic progressions:</p>
+              <code>>>> for i in range(5):
+                  ...     print(i)
+                  ...
+                  0
+                  1
+                  2
+                  3
+                  4</code>
+          </article>
+          </section>
+        <section class="main-section" id="Function_declarations">
+          <header>For loop declarations</header>
+          <article> 
+
+            <p>The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):</p>
+            <code>>>> # Measure some strings:
+                ... words = ['cat', 'window', 'defenestrate']
+                >>> for w in words:
+                ...     print(w, len(w))
+                ...
+                cat 3
+                window 6
+                defenestrate 12</code>
+
+                <p>If you need to modify the sequence you are iterating over while inside the loop (for example to duplicate selected items), it is recommended that you first make a copy. Iterating over a sequence does not implicitly make a copy. The slice notation makes this especially convenient:</p>
+              <code>>>> for w in words[:]:  # Loop over a slice copy of the entire list.
+                  ...     if len(w) > 6:
+                  ...         words.insert(0, w)
+                  ...
+                  >>> words
+                  ['defenestrate', 'cat', 'window', 'defenestrate']</code>
+            <p>With for w in words:, the example would attempt to create an infinite list, inserting defenestrate over and over again.</p>
+
+
+          </article>
+          </section>
+        <section class="main-section" id="Reference">
+          <header>Reference</header>
+          <article>
+            <li>All the documentation in this page is taken from <a href="https://docs.python.org/3/tutorial/index.html" target="_blank">Go to Documentation </a>
+          </li></article>
+          </section>
+      </main>
+ </body>
+</html>
